@@ -36,7 +36,7 @@ console.log(evenNumberArray);
 
 var oopsArray = [ 'turn', , 'down', , 'for', , 'what'];
 for (var i = 1; i < oopsArray.length; i +=2) {
-	oopsArray[i] = 'nope'
+	oopsArray[i] = 'nope';
 }
 console.log(oopsArray);
 
