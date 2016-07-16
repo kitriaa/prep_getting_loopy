@@ -118,15 +118,19 @@ var currentClass = [
     enrolled: true
   }
 ];
+var class2 = 1;
 function graduateAndSetNewClass(class1) {
-	for (var i = 0; i < class1.length; i++) {
-		var student = class1[i];
-		if (class1[i].enrolled === true) {
-			class1[i].graduated = true;
-		} else  if (class1[i].enrolled === false) {
-			class1[i].enrolled = true;
+	if (typeof(class1) === "array") {
+		for (var i = 0; i < class1.length; i++) {
+			var student = class1[i];
+			if (class1[i].enrolled === true) {
+				class1[i].graduated = true;
+			} else  if (class1[i].enrolled === false) {
+				class1[i].enrolled = true;
+			}
 		}
 	}
 	return class1;
 }
 console.log(graduateAndSetNewClass(currentClass));
+console.log(graduateAndSetNewClass(class2));
